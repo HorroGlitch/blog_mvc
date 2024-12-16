@@ -1,8 +1,14 @@
 <?php
+include('Manager.php');
+include('Blog.php');
 
-    $connexion = new PDO();
+    $connexion = new PDO('mysql:host=127.0.0.1;dbname=poo', 'root');
     $manage = new Manager();
     $manage->setBase($connexion);
+
+    $manage->setTitre($titre);
+    $manage->setComm($comm);
+    $manage->setImage($image);
 
     $titre = $_POST['titre'];
     $comm = $_POST['commentary'];

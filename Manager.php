@@ -15,12 +15,12 @@
             image,
             now()) VALUES (
 
-            $blog->getTitre(),
-            $blog->getComm(),
-            $blog->getImage(),
+            $blog->getTitre,
+            $blog->getComm,
+            $blog->getImage,
             :now())";
 
-            $this->poo->query($sql);
+            $this->base->query($sql);
         }
     }
 ?>

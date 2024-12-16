@@ -9,7 +9,7 @@
     <form action="insert.php" method="post">
         <label for="titre">Titre</label><input type="text" name="titre" id="titre"><br>
 
-        <label for="commentary">Commentaire</label><textarea name="commentary" id="commentary"></textarea><br>
+        <label for="commentary">Commentaire</label><br><textarea name="commentary" id="commentary"></textarea><br>
 
         <label for="image">Image</label><input type="file" name="image" id="image"><br>
 
