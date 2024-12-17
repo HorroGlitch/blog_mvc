@@ -11,16 +11,13 @@
         public function insert($blog){
             $sql = "INSERT INTO blog (
             titre,
-            commentary,
+            commentaire,
             image,
-            now()) VALUES (
-
-            $blog->getTitre,
-            $blog->getComm,
-            $blog->getImage,
-            :now())";
-
-            $this->base->query($sql);
+            date) VALUES (:titre, :commentaire, :image, NOW())";
+            $result = $this->base->prepare($sql);
+            $result->execute(['titre' => $blog->getTitre(), 'commentaire' => $blog->getComm(), 'image' => $blog->getImage()]);
         }
+
+        
     }
 ?>
