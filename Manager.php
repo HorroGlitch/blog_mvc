@@ -18,6 +18,18 @@
             $result->execute(['titre' => $blog->getTitre(), 'commentaire' => $blog->getComm(), 'image' => $blog->getImage()]);
         }
 
+
+        public function show($blog){
+            $sql = "SELECT * FROM blog";
+
+            $resultat = $base->prepare($sql);
+            $resultat->execute(array());
+            while ($ligne = $resultat->fetch())
+            {
+
+            }
+        }
+
         
     }
 ?>
